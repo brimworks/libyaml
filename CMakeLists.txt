@@ -1,7 +1,7 @@
 # Minimal CMake project for building a static library under Windows.
 
 cmake_minimum_required (VERSION 2.8)
-if(${CMAKE_MAJOR_VERSION} GREATER 3)
+if(NOT(${CMAKE_MAJOR_VERSION} LESS 3))
     cmake_policy(SET CMP0042 NEW)
 endif()
 project (yaml C)
